@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Edits | Editing Resources</title>
+    <meta name="description" content="Free editing resources, scenepacks, After Effects presets, and custom watermarks from SS Edits.">
+    <meta name="theme-color" content="#080b12">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 30px;
+        }
+
+        body {
+            margin: 0;
+            background: #080b12;
+            color: #f4f7ff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: #42a5ff;
+            color: #06101c;
+        }
+        
+/* LIVE WEBSITE STATS */
+.stats-section {
+    padding: 75px 5%;
+    border-top: 1px solid #1c2839;
+    border-bottom: 1px solid #1c2839;
+}
+
+.stats-container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.stats-heading {
+    margin-bottom: 30px;
+}
+
+.stats-heading span {
+    color: #58b1ff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.stats-heading h2 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.stats-heading p {
+    color: #929eb2;
+    font-size: 14px;
+}
+
+.stats-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #58b1ff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.stats-dot {
+    width: 7px;
+    height: 7px;
+    background: #45d483;
+    border-radius: 50%;
+    box-shadow: 0 0 9px #45d483;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #0c111b;
+    border: 1px solid #203047;
+    border-radius: 12px;
+    padding: 30px;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.stat-card:hover {
+    border-color: #58b1ff;
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    color: #58b1ff;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.stat-number {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #929eb2;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+        
+
+        /* ANNOUNCEMENT */
+
+        
+.announcement {
+    margin: 12px 3% 0;
+    min-height: 45px;
+    padding: 0;
+    border: 1px solid #20374e;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #b9c8dc;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.announcement-track {
+    display: flex;
+    width: max-content;
+    flex-shrink: 0;
+    animation: announcement-scroll 28s linear infinite;
+}
+
+
+.announcement-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 18px;
+    padding-right: 120px;
+    min-width: 100vw;
+    justify-content: space-around;
+}
+
+
+.announcement span {
+    color: #42a5ff;
+    font-weight: bold;
+}
+
+@keyframes announcement-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.announcement:hover .announcement-track {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .announcement-track {
+        animation: none;
+    }
+}
+
+
+        /* NAVIGATION */
+
+        header {
+            position: relative;
+            z-index: 20;
+            margin: 18px 5% 0;
+            min-height: 76px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            border: 1px solid #1c344b;
+            border-radius: 50px;
+            background: #0c111b;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #42a5ff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 28px 0;
+            color: #b5bdcc;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #58b1ff;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 65px;
+            left: -15px;
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #25384e;
+            border-radius: 12px;
+            background: #101722;
+            box-shadow: 0 12px 35px #0008;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item:focus-within .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            border-radius: 7px;
+            color: #b5bdcc;
+            font-size: 13px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            color: white;
+            background: #1a293b;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 570px;
+            padding: 120px 20px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 50% 55%,
+                #10243b 0%, #0b111d 38%, #080b12 75%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: #168bff;
+            opacity: 0.06;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        .hero > * {
+            position: relative;
+        }
+
+        .eyebrow {
+            margin-bottom: 22px;
+            color: #58b1ff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin: 0;
+            font-size: clamp(42px, 6vw, 76px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #42a5ff;
+            text-shadow: 0 0 35px #168bff35;
+        }
+
+        .hero p {
+            max-width: 490px;
+            margin: 23px 0 0;
+            color: #9ba8bb;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+            margin-top: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 24px;
+            border: 1px solid transparent;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.2s;
+        }
+
+        .button-primary {
+            color: #06101c;
+            background: #42a5ff;
+            box-shadow: 0 0 25px #168bff20;
+        }
+
+        .button-primary:hover {
+            background: #77beff;
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px #168bff35;
+        }
+
+        .button-secondary {
+            border-color: #29394d;
+            color: #d8e5f6;
+            background: #0d1420;
+        }
+
+        .button-secondary:hover {
+            border-color: #42a5ff;
+            background: #111e2e;
+            transform: translateY(-2px);
+        }
+
+        /* QUICK STATS */
+
+        
+.stats-section {
+    padding: 35px 7% 45px;
+    background: #080b12;
+    text-align: center;
+}
+
+.stats-title {
+    margin: 0 0 20px;
+    color: #f4f7ff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.stats {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #203047;
+    border-radius: 12px;
+    background: #0c111b;
+    box-shadow: 0 0 30px #168bff08;
+}
+
+
+        .stat {
+            padding: 8px 15px;
+            text-align: center;
+        }
+
+        .stat + .stat {
+            border-left: 1px solid #203047;
+        }
+
+        .stat strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #58b1ff;
+            font-size: 22px;
+        }
+
+        .stat span {
+            color: #8997aa;
+            font-size: 12px;
+        }
+
+        /* SHARED SECTIONS */
+
+        .resources,
+        .featured,
+        .social-section {
+            padding: 75px 7% 85px;
+            border-top: 1px solid #192638;
+            background: #090d15;
+        }
+
+        .section-top {
+            max-width: 1150px;
+            margin: 0 auto 30px;
+        }
+
+        .section-label {
+            display: block;
+            margin-bottom: 12px;
+            color: #58b1ff;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-top h2 {
+            margin: 0 0 10px;
+            font-size: clamp(25px, 3vw, 32px);
+            letter-spacing: -0.5px;
+        }
+
+        .section-top p {
+            margin: 0;
+            color: #8997aa;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* RESOURCE CARDS */
+
+        .resource-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .resource-card {
+            position: relative;
+            min-height: 180px;
+            padding: 25px;
+            overflow: hidden;
+            border: 1px solid #1d2b3d;
+            border-radius: 10px;
+            background: #0d131e;
+            transition:
+                border-color 0.2s,
+                background 0.2s,
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            border-color: #357fbd;
+            background: #101c2b;
+            box-shadow: 0 12px 35px #0002;
+        }
+
+        .card-label {
+            color: #58b1ff;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .resource-card h3 {
+            margin: 25px 0 10px;
+            font-size: 18px;
+        }
+
+        .resource-card p {
+            margin: 0;
+            color: #94a0b2;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .card-arrow {
+            position: absolute;
+            top: 22px;
+            right: 23px;
+            color: #526981;
+            font-size: 18px;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .resource-card:hover .card-arrow {
+            color: #58b1ff;
+            transform: translate(2px, -2px);
+        }
+
+        /* FEATURED RESOURCES */
+
+        .featured {
+            background:
+                radial-gradient(ellipse at 50% 0%,
+                #101d2d 0%, #090d15 65%);
+        }
+
+        .featured-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .featured-card {
+            overflow: hidden;
+            border: 1px solid #1d2b3d;
+            border-radius: 12px;
+            background: #0c121d;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+            border-color: #357fbd;
+        }
+
+        .featured-preview {
+            min-height: 155px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 1px solid #1d2b3d;
+            background:
+                radial-gradient(ellipse at center,
+                #172d45 0%, #101a29 45%, #0b111a 100%);
+        }
+
+        .preview-icon {
+            color: #58b1ff;
+            font-size: 35px;
+            text-shadow: 0 0 25px #168bff55;
+        }
+
+        .preview-text {
+            color: #71869e;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .featured-info {
+            padding: 20px;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 9px;
+            border: 1px solid #29425c;
+            border-radius: 4px;
+            color: #7ebeff;
+            background: #122236;
+            font-size: 9px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .featured-info h3 {
+            margin: 0 0 9px;
+            font-size: 17px;
+        }
+
+        .featured-info p {
+            margin: 0;
+            color: #94a0b2;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* SOCIAL SECTION */
+
+        .social-section {
+            background: #080b12;
+        }
+
+        .social-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+       
+.social-card {
+    padding: 22px;
+    border: 1px solid #203047;
+    border-radius: 10px;
+    background: #0d131e;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.social-card:hover {
+    border-color: #42a5ff;
+    transform: translateY(-3px);
+}
+
+
+        .social-card:hover {
+            border-color: #42a5ff;
+            transform: translateY(-3px);
+        }
+
+        .social-card .social-icon {
+            display: block;
+            margin-bottom: 17px;
+            color: #58b1ff;
+            font-size: 26px;
+        }
+
+        .social-card h3 {
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .social-card p {
+            margin: 0 0 20px;
+            color: #94a0b2;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .social-link {
+            color: #58b1ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-top: 1px solid #192638;
+            color: #758296;
+            font-size: 12px;
+        }
+
+        footer a {
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #58b1ff;
+        }
+
+        /* SUBTLE ENTRANCE ANIMATION */
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero .eyebrow,
+            .hero h1,
+            .hero p,
+            .hero-buttons {
+                animation: fade-up 0.65s ease both;
+            }
+
+            .hero h1 {
+                animation-delay: 0.08s;
+            }
+
+            .hero p {
+                animation-delay: 0.16s;
+            }
+
+            .hero-buttons {
+                animation-delay: 0.24s;
+            }
+
+            @keyframes fade-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(12px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+            header {
+                padding: 0 22px;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .resource-grid,
+            .featured-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stats-section {
+    padding: 30px 5% 35px;
+}
+            .announcement {
+                margin: 10px 3% 0;
+                font-size: 10px;
+            }
+
+            header {
+                margin: 12px 3% 0;
+                padding: 18px 15px;
+                border-radius: 22px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link {
+                padding: 10px 0;
+                font-size: 12px;
+            }
+
+            .dropdown-menu {
+                top: 30px;
+                left: auto;
+                right: 0;
+            }
+
+            .hero {
+                min-height: 490px;
+                padding: 85px 22px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .eyebrow {
+                font-size: 9px;
+                letter-spacing: 3px;
+            }
+
+            .stats {
+                padding: 20px 5px;
+            }
+
+            .stat {
+                padding: 8px 5px;
+            }
+
+            .stat strong {
+                font-size: 18px;
+            }
+
+            .stat span {
+                font-size: 10px;
+            }
+
+            .resources,
+            .featured,
+            .social-section {
+                padding: 55px 6%;
+            }
+
+            .resource-grid,
+            .featured-grid,
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-card {
+                min-height: 155px;
+            }
+
+            footer {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+
+        /* SCROLL FADE-UP ANIMATION - added */
+        @media (prefers-reduced-motion: no-preference) {
+            .scroll-fade-up {
+                opacity: 0;
+                transform: translateY(28px);
+                transition: opacity 0.7s ease, transform 0.7s ease;
+            }
+
+            .scroll-fade-up.scroll-fade-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-fade-up {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+<div class="announcement">
+    <div class="announcement-track">
+        <div class="announcement-group">
+            <span>✦</span> New exclusive things dropping soon
+            <span>✦</span> Free resources for editors
+            <span>✦</span> Stay tuned for updates
+        </div>
+
+        <div class="announcement-group" aria-hidden="true">
+            <span>✦</span> New exclusive things dropping soon
+            <span>✦</span> Free resources for editors
+            <span>✦</span> Stay tuned for updates
+        </div>
+    </div>
+</div>
+
+
+    <header>
+        <a class="logo" href="#home">Free editing resources <span>that help you evolve your edits</span></a>
+
+                <nav>
+            <div class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-link" href="#resources">Resources</a>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-link" href="about.html">About Me</a>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+            </div>
+
+            <div class="nav-item">
+                <a class="nav-link" href="#other">More ▾</a>
+                <div class="dropdown-menu">
+                    <a href="https://discord.gg/YwFvHygzYf" target="_blank" rel="noopener noreferrer">Discord Community ↗</a>
+                    <a href="https://www.youtube.com/@SSEdits-14/shorts" target="_blank" rel="noopener noreferrer">YouTube Channel ↗</a>
+                    <a href="#featured">Featured Resources</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+            <div class="eyebrow"></div>
+
+            <h1>
+                Take your edits<br>
+                <span>to the next level.</span>
+            </h1>
+
+            <p>
+                Scenepacks, After Effects presets, custom watermarks,
+                and more resources to bring your edits to life.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="button button-primary" href="#resources">
+                    EXPLORE RESOURCES
+                </a>
+
+                <a class="button button-secondary"
+                   href="https://discord.gg/YwFvHygzYf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    JOIN THE COMMUNITY
+                </a>
+            </div>
+        </section>
+
+        <!-- STATS -->
+
+        
+<!-- STATS -->
+
+<section class="stats-section">
+    <h2 class="stats-title">SS Edits</h2>
+
+    <div class="stats">
+        <div class="stat">
+            <strong>High Quality Scenepacks</strong>
+            <span>To enhance your edits quality</span>
+        </div>
+
+        <div class="stat">
+            <strong>FREE</strong>
+            <span>Editing Resources</span>
+        </div>
+
+        <div class="stat">
+            <strong>Tips and tricks</strong>
+            <span>Helping grow your Youtube Channel</span>
+        </div>
+    </div>
+</section>
+
+
+        <!-- RESOURCE CATEGORIES -->
+
+        <section class="resources" id="resources">
+            <div class="section-top">
+                <span class="section-label">THE RESOURCE HUB</span>
+                <h2>Browse resources</h2>
+                <p>Find something for your next edit.</p>
+            </div>
+
+            <div class="resource-grid">
+
+                <a class="resource-card" id="scenepacks" href="scenepacks.html">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">Video Clips</div>
+                    <h3>Scenepacks</h3>
+                    <p>Clips and scenes ready for your next project.</p>
+                </a>
+
+                <a class="resource-card" id="presets" href="presets.html">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">After Effects</div>
+                    <h3>Presets</h3>
+                    <p>Editing resources to add to your workflow.</p>
+                </a>
+
+                <a class="resource-card" id="watermarks" href="watermarks.html">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">Graphics</div>
+                    <h3>Watermarks</h3>
+                    <p>Custom graphics and watermarks for editors.</p>
+                </a>
+
+                <a class="resource-card" id="4k-pictures" href="4kpictures.html">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">Pics</div>
+                    <h3>4k pictures</h3>
+                    <p>4k quality pictures of HP Characters you can use.</p>
+                </a>
+
+                <a class="resource-card"
+                   href="https://discord.gg/YwFvHygzYf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">Community</div>
+                    <h3>Discord</h3>
+                    <p>Join SS Community and share your edits.</p>
+                </a>
+
+                <a class="resource-card"
+                   href="https://www.youtube.com/@SSEdits-14/shorts"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="card-arrow">↗</span>
+                    <div class="card-label">Latest Edits</div>
+                    <h3>YouTube</h3>
+                    <p>Watch edits and check out SS Edits channel.</p>
+                </a>
+
+            </div>
+        </section>
+
+       
+<!-- UPCOMING EVENTS -->
+
+<section class="featured" id="featured">
+    <div class="section-top">
+        <span class="section-label">WHAT'S HAPPENING</span>
+        <h2>Upcoming Events</h2>
+        <p>Take part in events, challenges, and more with SS Edits!</p>
+    </div>
+
+    <div class="featured-grid">
+
+        <article class="featured-card">
+            <div class="featured-preview">
+                <span class="preview-icon">🎄</span>
+                <span class="preview-text">FESTIVE RELEASES</span>
+            </div>
+            <div class="featured-info">
+                <h3>Christmas Presets</h3>
+                <p>Get into the holiday spirit with Christmas-themed editing resources.</p>
+            </div>
+        </article>
+
+        <article class="featured-card">
+            <div class="featured-preview">
+                <span class="preview-icon">🏆</span>
+                <span class="preview-text">SHOW YOUR SKILLS</span>
+            </div>
+            <div class="featured-info">
+                <h3>Editing Comps</h3>
+                <p>Compete with other editors, show off your skills, and win prizes!</p>
+            </div>
+        </article>
+
+        <article class="featured-card">
+            <div class="featured-preview">
+                <span class="preview-icon">✨</span>
+                <span class="preview-text">GET CREATIVE</span>
+            </div>
+            <div class="featured-info">
+                <h3>Themed Edits & More</h3>
+                <p>Join fun themed editing activities and discover more community events.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- LIVE WEBSITE STATS -->
+<section class="stats-section">
+    <div class="stats-container">
+
+        <div class="stats-heading">
+            <span>SS EDITS STATISTICS</span>
+            <h2>Website Stats</h2>
+            <p>See how SS Edits Website is growing!</p>
+
+            <div class="stats-live">
+                <span class="stats-dot"></span>
+                LIVE STATISTICS
+            </div>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon">◉</div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Total Page Views</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">♙</div>
+                <div class="stat-number">0</div>
+                <div class="stat-label">Total Visitors</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END LIVE WEBSITE STATS -->
+
+        
+<!-- SOCIAL LINKS -->
+
+<section class="social-section" id="socials">
+    <div class="section-top">
+        <span class="section-label">STAY CONNECTED</span>
+        <h2>Find SS Edits</h2>
+        <p>Follow along and join the community.</p>
+    </div>
+
+    <div class="social-grid">
+
+        <a class="social-card"
+           href="https://discord.gg/YwFvHygzYf"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span class="social-icon">✧</span>
+            <h3>Discord</h3>
+            <p>Join SS Community for editing resources and feedback.</p>
+            <span class="social-link">JOIN SERVER ↗</span>
+        </a>
+
+        <a class="social-card"
+           href="https://www.youtube.com/@SSEdits-14/shorts"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span class="social-icon">▶</span>
+            <h3>YouTube</h3>
+            <p>Watch my latest edits and videos.</p>
+            <span class="social-link">WATCH VIDEOS ↗</span>
+        </a>
+
+        <a class="social-card"
+           href="https://www.tiktok.com/@sseditsog"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span class="social-icon">♪</span>
+            <h3>TikTok</h3>
+            <p>Check out my edits and latest posts.</p>
+            <span class="social-link">FOLLOW ON TIKTOK ↗</span>
+        </a>
+
+        <a class="social-card"
+           href="https://www.instagram.com/sseditsog/"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span class="social-icon">◎</span>
+            <h3>Instagram</h3>
+            <p>See more edits and keep up with my posts.</p>
+            <span class="social-link">FOLLOW ON INSTAGRAM ↗</span>
+        </a>
+
+    </div>
+</section>
+
+
+
+<!-- SCROLL FADE-UP ANIMATION - added -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(
+            ".stats-section, .resources, .featured, .social-section, " +
+            ".resource-card, .featured-card, .social-card"
+        );
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+
+        if (!("IntersectionObserver" in window)) {
+            fadeElements.forEach(function (element) {
+                element.classList.add("scroll-fade-visible");
+            });
+            return;
+        }
+
+        const observer = new IntersectionObserver(function (entries, currentObserver) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("scroll-fade-visible");
+                    currentObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: "0px 0px -35px 0px"
+        });
+
+        fadeElements.forEach(function (element) {
+            element.classList.add("scroll-fade-up");
+            observer.observe(element);
+        });
+    });
+</script>

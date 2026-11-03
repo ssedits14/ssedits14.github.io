@@ -1115,7 +1115,7 @@
 
             <div class="stat-card">
                 <div class="stat-icon">◉</div>
-                <div class="stat-number">0</div>
+                <div class="stat-number" id="page-views">0</div>
                 <div class="stat-label">Total Page Views</div>
             </div>
 
@@ -1224,3 +1224,16 @@
         });
     });
 </script>
+<script>
+fetch("https://ssedits.goatcounter.com/counter/TOTAL.json")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("page-views").textContent = data.count;
+    })
+    .catch(error => {
+        console.error("Could not load page views:", error);
+    });
+</script>
+
+</body>
+</html>
